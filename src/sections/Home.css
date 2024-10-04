@@ -1,0 +1,138 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+    position: relative;
+  }
+  
+  .home-content {
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(156, 67, 149, 0.6); /* Dark background to highlight text */
+    border-radius: 10px;
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: slide-down 1s ease-out;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0; /* Hidden initially */
+  }
+  
+  .highlight {
+    color: #ffcc00;
+    font-weight: bold;
+  }
+  
+  .cta-buttons {
+    margin-top: 30px;
+  }
+  
+  .cta-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0; /* Hidden initially */
+  }
+  
+  .cta-buttons .btn:hover {
+    background-color: #ff9900;
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  .cta-buttons .btn-secondary {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .cta-buttons .btn-secondary:hover {
+    background-color: #ccc;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Fade-in with delay */
+  .fade-in {
+    animation: fade-in 1.5s forwards;
+  }
+  
+  .fade-in.delay-1 {
+    animation-delay: 0.5s;
+  }
+  
+  .fade-in.delay-2 {
+    animation-delay: 1s;
+  }
+  
+  .fade-in.delay-3 {
+    animation-delay: 1.5s;
+  }
+  
+  .slide-up {
+    animation: slide-up 1s forwards;
+  }
+  
+  .slide-up.delay-4 {
+    animation-delay: 2s;
+  }
+  
+  .slide-up.delay-5 {
+    animation-delay: 2.5s;
+  }
+  

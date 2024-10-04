@@ -1,0 +1,159 @@
+/* Main section styling */
+.w3l-gallery {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+}
+
+/* Gallery container */
+.HomePageGallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Title styling */
+.title-content {
+  margin-bottom: 50px;
+}
+
+.title-subw3hny {
+  color: #ff5f6d;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title-w3l {
+  color: #333;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Gallery items */
+.gallery_agile {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery_agile li {
+  margin: 15px;
+  width: 250px;
+}
+
+.w3_agile_portfolio_grid {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.w3_agile_portfolio_grid:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.w3_agile_portfolio_grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* Text overlay on hover */
+.w3layouts_news_grid_pos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.w3_agile_portfolio_grid:hover .w3layouts_news_grid_pos {
+  opacity: 1;
+}
+
+.wthree_text {
+  color: #fff;
+  text-align: center;
+}
+
+.wthree_text h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.wthree_text p {
+  font-size: 14px;
+}
+
+/* Button container styling */
+.project-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-buttons .btn {
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+/* GitHub Button */
+.project-buttons .btn-primary {
+  background-color: #28a745;
+  border: none;
+}
+
+.project-buttons .btn-primary:hover {
+  background-color: #218838;
+}
+
+/* More Details Button */
+.project-buttons .btn-info {
+  background-color: #17a2b8;
+  border: none;
+}
+
+.project-buttons .btn-info:hover {
+  background-color: #138496;
+}
+
+/* Modal customization */
+.modal-header {
+  background-color: #ff5f6d;
+  color: white;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+.modal-body img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.desc {
+  color: #ff5f6d;
+  background-color: rgb(243, 243, 243);
+  padding: 15px;
+  border-radius: 10px;
+}
+.modal-footer .btn-secondary {
+  background-color: #6c757d;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #5a6268;
+}

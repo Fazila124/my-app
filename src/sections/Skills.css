@@ -1,0 +1,37 @@
+.skills-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: space-between;
+}
+
+.skill {
+  flex-basis: calc(50% - 20px); /* Each skill takes 50% of the row minus some margin */
+  margin-bottom: 20px; /* Add some space between the rows */
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.skill-rating {
+  display: flex;
+}
+
+.skill-rating .fa-star {
+  font-size: 24px;
+  margin-right: 5px;
+  color: #ddd; /* Color for empty stars */
+}
+
+.filled {
+  color: #ffcc00; /* Gold color for filled stars */
+}
+
+/* Optional: Adjust spacing for larger screens */
+@media (min-width: 768px) {
+  .skills-container {
+    gap: 20px; /* Space between skills */
+  }
+}
