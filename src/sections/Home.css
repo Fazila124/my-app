@@ -21,6 +21,7 @@
   
   .home-content {
     max-width: 800px;
+    margin-top: 50px;
     padding: 20px;
     background-color: rgba(156, 67, 149, 0.6); /* Dark background to highlight text */
     border-radius: 10px;

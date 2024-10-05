@@ -12,7 +12,7 @@ const About = () => {
         <div className="about-content slide-in">
           <h2>About Me</h2>
           <h3>
-            Hello! I'm <span className="highlight">[Fazi]</span>, a passionate and creative web developer with a focus
+            Hello! I'm <span className="highlight">Fazi</span>, a passionate and creative web developer with a focus
             on building responsive, user-friendly, and engaging websites. I have a deep understanding of various
             front-end technologies and am always excited to explore new trends and technologies in the web development space.
           

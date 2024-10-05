@@ -1,10 +1,13 @@
 .contact-section {
     padding: 50px;
     background-color: #ffb1e1;
+    text-align: center;
   }
   
   .contact-form div {
     margin-bottom: 10px;
+    margin-top: 35px;
+    text-align: center;
 
   }
   
