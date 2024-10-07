@@ -16,7 +16,7 @@ const Skills = () => {
 
   return (
     <section className="skills-section" id="skills">
-      <h2 className="skills-heading" style={{color:"green", fontWeight:800}}>My Skills</h2>
+      <h2 className="skills-heading" style={{color:"green", fontWeight:800, textAlign:'center'}}>My Skills</h2>
       <div className="skills-container">
         {skillData.map((skill, index) => (
           <div className="skill" key={index}>

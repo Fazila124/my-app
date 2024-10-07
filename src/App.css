@@ -54,6 +54,7 @@ nav ul li a:hover {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  
 }
 
 .menu-toggle .hamburger {
@@ -62,6 +63,7 @@ nav ul li a:hover {
   background-color: white;
   margin: 5px 0;
   transition: background-color 0.3s ease;
+  
 }
 
 .menu-toggle:hover .hamburger {
@@ -100,7 +102,7 @@ nav ul li a:hover {
     display: flex;
     position: absolute;
     top: 15px;
-    left: 15px;
+    right: 15px;
     z-index: 1100; /* Ensure it's above other content */
   }
 }

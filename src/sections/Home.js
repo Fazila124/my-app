@@ -1,5 +1,6 @@
 // components/Home.js
 import React from 'react';
+import { Link } from 'react-scroll';
 import './Home.css'; // Import the styles
 
 const Home = () => {
@@ -25,8 +26,22 @@ const Home = () => {
         </p>
         
         <div className="cta-buttons">
-          <a href="#projects" className="btn slide-up delay-4">View My Work</a>
-          <a href="#contact" className="btn btn-secondary slide-up delay-5">Contact Me</a>
+          <Link 
+            to="gallery" 
+            smooth={true} 
+            duration={100} 
+            className="btn slide-up delay-4"
+          >
+            View My Work
+          </Link>
+          <Link 
+            to="contact" 
+            smooth={true} 
+            duration={100} 
+            className="btn btn-secondary slide-up delay-5"
+          >
+            Contact Me
+          </Link>
         </div>
       </div>
     </section>
