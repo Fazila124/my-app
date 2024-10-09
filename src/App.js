@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState, useEffect, useRef } from 'react'; 
 import { Link, Element } from 'react-scroll';
 import Home from './sections/Home';
 import About from './sections/About';
@@ -8,13 +8,56 @@ import Contact from './sections/Contact';
 import './App.css';
 
 const App = () => {
-  // State to manage the toggle for mobile view
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  // Function to toggle the nav bar
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
+
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const galleryRef = useRef(null);
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    const sections = [
+      { ref: homeRef, className: 'home-visible' },
+      { ref: aboutRef, className: 'about-visible' },
+      { ref: skillsRef, className: 'skills-visible' },
+      { ref: galleryRef, className: 'gallery-visible' },
+      { ref: contactRef, className: 'contact-visible' }
+    ];
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const target = entry.target;
+
+        if (entry.isIntersecting) {
+          // Add animation class when section is in view
+          target.classList.add(target.dataset.animation);
+        } else {
+          // Remove animation class when section goes out of view
+          target.classList.remove(target.dataset.animation);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => {
+      if (section.ref.current) {
+        section.ref.current.dataset.animation = section.className;
+        observer.observe(section.ref.current);
+      }
+    });
+
+    return () => {
+      sections.forEach(section => {
+        if (section.ref.current) {
+          observer.unobserve(section.ref.current);
+        }
+      });
+    };
+  }, []);
 
   return (
     <div className="App">
@@ -25,7 +68,6 @@ const App = () => {
             <span className="hamburger"></span>
             <span className="hamburger"></span>
           </div>
-          {/* Toggling the class based on isNavOpen */}
           <ul className={isNavOpen ? "nav-links open" : "nav-links"}>
             <li><Link to="home" smooth={true} duration={100} onClick={toggleNav}>Home</Link></li>
             <li><Link to="about" smooth={true} duration={100} onClick={toggleNav}>About</Link></li>
@@ -37,11 +79,21 @@ const App = () => {
       </header>
 
       <main>
-        <Element name="home"><Home /></Element>
-        <Element name="about"><About /></Element>
-        <Element name="skills"><Skills /></Element>
-        <Element name="gallery"><Gallery /></Element>
-        <Element name="contact"><Contact /></Element>
+        <Element name="home">
+          <div ref={homeRef} className="section home-section"><Home /></div>
+        </Element>
+        <Element name="about">
+          <div ref={aboutRef} className="section about-section"><About /></div>
+        </Element>
+        <Element name="skills">
+          <div ref={skillsRef} className="section skills-section"><Skills /></div>
+        </Element>
+        <Element name="gallery">
+          <div ref={galleryRef} className="section gallery-section"><Gallery /></div>
+        </Element>
+        <Element name="contact">
+          <div ref={contactRef} className="section contact-section"><Contact /></div>
+        </Element>
       </main>
     </div>
   );

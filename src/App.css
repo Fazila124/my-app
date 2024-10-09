@@ -13,7 +13,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color:white;
+  color: white;
 }
 
 nav {
@@ -54,7 +54,6 @@ nav ul li a:hover {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  
 }
 
 .menu-toggle .hamburger {
@@ -63,7 +62,6 @@ nav ul li a:hover {
   background-color: white;
   margin: 5px 0;
   transition: background-color 0.3s ease;
-  
 }
 
 .menu-toggle:hover .hamburger {
@@ -114,5 +112,127 @@ nav ul li a:hover {
 
   h1, h2 {
     font-size: 1.5rem;
+  }
+}
+
+/* Global Styles */
+.section {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+/* Home Section Animation */
+.home-section.home-visible {
+  opacity: 1;
+  animation: fade-in-up 1.2s ease-out forwards;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Section Animation */
+.about-section.about-visible {
+  opacity: 1;
+  animation: fade-in-left 1.2s ease-out forwards;
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Skills Section Animation */
+.skills-section.skills-visible {
+  opacity: 1;
+  animation: fade-in-right 1.2s ease-out forwards;
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Gallery Section Animation */
+.gallery-section.gallery-visible {
+  opacity: 1;
+  animation: zoom-in 1.2s ease-out forwards;
+}
+
+@keyframes zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Contact Section Animation */
+.contact-section.contact-visible {
+  opacity: 1;
+  animation: rotate-in 1.2s ease-out forwards;
+}
+
+@keyframes rotate-in {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+/* Responsive Section Adjustments */
+@media screen and (max-width: 1024px) {
+  .section {
+    padding: 50px 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 40px 10px;
+  }
+
+  .about-section, .skills-section, .gallery-section, .contact-section {
+    text-align: center; /* Center text for smaller devices */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    padding: 30px 5px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
   }
 }
